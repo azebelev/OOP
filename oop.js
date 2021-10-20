@@ -170,7 +170,7 @@ function Clothes(material, color, ID, name, description, price, quantity, images
 
 //inheritance from AbstractProduct
 Clothes.prototype = Object.create(AbstractProduct.prototype);
-Clothes.prototype.constructor = Clothes;
+//Clothes.prototype.constructor = Clothes;
 
 //adding of new properties to prototype of Clothes
 Object.assign(Clothes.prototype, {
@@ -199,7 +199,7 @@ function Electronics(warranty, power, ID, name, description, price, quantity, im
   this.power = power;
 }
 Electronics.prototype = Object.create(AbstractProduct.prototype);
-Clothes.prototype.constructor = Clothes;
+Electronics.prototype.constructor = Electronics;
 //adding of new properties to prototype of Electronics
 Object.assign(Electronics.prototype, {
   setWarranty(warranty) {
@@ -253,7 +253,7 @@ function sortProducts(products, sortRule) {
   return sortedProducts;
 }
 
-//tests
+
 //new AbstractProduct("1");
 let t_shot = new Clothes("silk", "red", "1", "t_shot", "for sport", "5", "10", ["t1.png", "t2.png"]);
 let tv = new Electronics("2 year", "220W", "2", "TV", "55 inch", "500", "3", ["tv1.png", "tv2.png"]);
